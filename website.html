@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Webpage</title>
+    <style>
+      /* Basic Styling */
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #a33030;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between; /* Distribute logo and nav */
+        align-items: center; /* Vertically align items */
+      }
+
+      .logo {
+        font-weight: bold;
+        transition: transform 0.3s ease;
+      }
+
+      .logo:hover {
+        transform: scale(1.1);
+        color: aqua;
+        text-shadow: greenyellow;
+        cursor: pointer;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Flexbox for navigation */
+      }
+
+      nav li {
+        margin-left: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      main {
+        padding: 20px;
+        display: grid; /* Grid for main content */
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 20px; /* Spacing between columns */
+      }
+
+      .content {
+        color: chartreuse;
+      }
+
+      .image {
+        text-align: center; /* Center the image */
+      }
+
+      .image img {
+        max-width: 100%; /* Image responsive */
+        height: auto;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center horizontally */
+      }
+
+      .social-links {
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      .social-links a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      /* Media Queries */
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column; /* Stack header items */
+          align-items: flex-start; /* Align to the left */
+        }
+        nav ul {
+          flex-direction: column; /* Stack nav links */
+        }
+        nav li {
+          margin: 10px 0; /* Add vertical margin */
+          margin-left: 0; /* Remove horizontal margin */
+        }
+        main {
+          grid-template-columns: 1fr; /* Single column */
+        }
+        footer {
+          flex-direction: column; /* Stack footer content */
+        }
+        .social-links {
+          flex-direction: column; /* Stack social links */
+        }
+      }
+
+      @media (min-width: 601px) and (max-width: 1024px) {
+        main {
+          grid-template-columns: 1fr; /* Single column */
+        }
+        footer {
+          flex-direction: column;
+        }
+      }
+
+      /* Bonus: Add a simple transition (optional) */
+      main,
+      header,
+      footer {
+        transition: all 0.3s ease; /* Smooth transition */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">My Website</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content">
+        <h2>Eliz-1 collection</h2>
+        <p>
+          Welcome to my collection. I have a variety of clothes for both genders
+        </p>
+        <p>
+          I offer a wide selection of clothes from pajamas to official outfits.
+          I also offer personalized consultation offering styling advices.
+        </p>
+      </div>
+      <div class="image">
+        <img src="product.jpg" alt="product Image" />
+      </div>
+    </main>
+
+    <footer>
+      <div class="social-links">
+        <a href="#"
+          ><img src="facebook-icon.png" alt="Facebook" width="20" height="20"
+        /></a>
+        <a href="#"
+          ><img src="X-icon.png" alt="Twitter" width="20" height="20"
+        /></a>
+        <a href="#"
+          ><img src="instagram-icon.png" alt="Instagram" width="20" height="20"
+        /></a>
+      </div>
+      <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
